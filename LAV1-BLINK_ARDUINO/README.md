@@ -13,9 +13,27 @@ int main(void)
     // Infinite loop
     while (1)
     {
-        // Generate a lettre `A` Morse code
+         // Generate a lettre `A` Morse code
 
         // WRITE YOUR CODE HERE
+
+	 digitalWrite(LED_GREEN, HIGH);
+
+         _delay_ms(SHORT_DELAY);
+
+        digitalWrite(LED_GREEN, LOW);
+          
+          _delay_ms(LONG_DELAY);
+
+        digitalWrite(LED_GREEN, HIGH);
+
+        _delay_ms(LONG_DELAY);
+          
+        digitalWrite(LED_GREEN, LOW);   
+
+        _delay_ms(SHORT_DELAY);
+
+        _delay_ms(INTER_LETTER_DELAY);
 
     }
 

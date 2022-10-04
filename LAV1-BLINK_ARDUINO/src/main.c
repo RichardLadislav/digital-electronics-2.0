@@ -13,8 +13,11 @@
 /* Defines -----------------------------------------------------------*/
 #define LED_GREEN PB5   // PB5 is AVR pin where green on-board LED 
 #define LED_BLUE PB0                        
-                        // is connected
+                       // is connected
 #define SHORT_DELAY 250 // Delay in milliseconds
+#define LONG_DELAY 750
+#define INTER_LETTER_DELAY 1750
+
 #ifndef F_CPU
 # define F_CPU 16000000 // CPU frequency in Hz required for delay funcs
 #endif
@@ -49,17 +52,31 @@ int main(void)
     // Infinite loop
     while (1)
     {
-        // Change LED value
-        if (led_value == LOW)
-            led_value = HIGH;
-        else
-            led_value = LOW;
+        /
 
         // Pause several milliseconds
+        
+        
+        digitalWrite(LED_GREEN, HIGH);
+
+         _delay_ms(SHORT_DELAY);
+
+        digitalWrite(LED_GREEN, LOW);
+          
+          _delay_ms(LONG_DELAY);
+
+        digitalWrite(LED_GREEN, HIGH);
+
+        _delay_ms(LONG_DELAY);
+          
+        digitalWrite(LED_GREEN, LOW);   
+
         _delay_ms(SHORT_DELAY);
-        // Turn ON/OFF on-board LED
-        digitalWrite(LED_GREEN, led_value);
-         digitalWrite(LED_BLUE, led_value);
+
+        _delay_ms(INTER_LETTER_DELAY);
+
+
+        
     }
 
     // Will never reach this

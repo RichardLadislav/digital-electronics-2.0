@@ -7,6 +7,11 @@
 ```c
 int main(void)
 {
+
+#define SHORT_DELAY 250 // Delay in milliseconds
+#define LONG_DELAY 750
+#define INTER_LETTER_DELAY 1750
+
     // Set pin where on-board LED is connected as output
     pinMode(LED_GREEN, OUTPUT);
 
@@ -44,4 +49,5 @@ int main(void)
 
 2. Scheme of Morse code application, i.e. connection of AVR device, LED, resistor, and supply voltage. The image can be drawn on a computer or by hand. Always name all components and their values!
 
-   ![your figure]()
+   ![BLINK_obvod](https://user-images.githubusercontent.com/99683944/193917260-c92d662a-62b1-450b-a0c8-65a24f94c567.png)
+

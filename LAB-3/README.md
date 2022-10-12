@@ -5,11 +5,13 @@ Lab 3: YOUR\_FIRSTNAME LASTNAME
 
 1.  Complete table with overflow times.
 
-         **Module**     **Number of bits**   **1**   **8**    **32**    **64**    **128**   **256**    **1024**
-      ---------------- -------------------- ------- -------- -------- ---------- --------- ---------- ----------
-       Timer/Counter0           8             16u     128u      --      1,024m      --       4,096m     8,192m
-       Timer/Counter1           16           4096u   32768u     --     262,144m     --      1,048576   4.194304
-       Timer/Counter2           8             16u     128u     512u     1,024m    2.048m     4,096m     8,192m
+ 
+
+   | **Module** | **Number of bits** | **1** | **8** | **32** | **64** | **128** | **256** | **1024** |
+   | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+   | Timer/Counter0 | 8  | 16u | 128u | -- |1,024m | -- | 4,096m | 8,192m |
+   | Timer/Counter1 | 16 | 4096u | 32768u     | -- | 262,144m| -- | 1,048576|4.194304 |
+   | Timer/Counter2 | 8  |  16u  | 128u    | 512u    |1,024m |  2.048m  |4,096m |8,192m |
 
 ### Interrupts
 
@@ -18,7 +20,7 @@ Lab 3: YOUR\_FIRSTNAME LASTNAME
     Always use syntax highlighting, meaningful comments, and follow C
     guidelines:
 
-    ``` {.c}
+    ``` .c
     /**
      * @name  Definitions for 8-bit Timer/Counter2
      * @note  t_OVF = 1/F_CPU * prescaler * 2^n where n = 8, F_CPU = 16 MHz

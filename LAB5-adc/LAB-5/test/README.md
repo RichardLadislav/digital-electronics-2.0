@@ -24,4 +24,6 @@ Consider an application for temperature measurement. Use analog temperature sens
 
 3. Draw two flowcharts for interrupt handler `TIMER1_OVF_vect` (which overflows every 1&nbsp;sec) and `ADC_vect`. The image can be drawn on a computer or by hand. Use clear descriptions of the individual steps of the algorithms.
 
-   ![your figure]()
+  ![temperature flowchart](https://user-images.githubusercontent.com/99683944/199312536-eb8bdd2f-7d68-4c42-90ff-2bc601086dff.png)
+
+  ![TIMERoverflow](https://user-images.githubusercontent.com/99683944/199312576-458bc754-0ca6-4a8d-a526-601aa3a59b1d.png)

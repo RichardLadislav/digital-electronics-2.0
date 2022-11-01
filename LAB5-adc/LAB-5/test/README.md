@@ -12,7 +12,7 @@ T# Lab 5: INSERT_YOUR_FIRSTNAME INSERT_YOUR_LASTNAME
    | Down   | 1.203&nbsp;V | 246 | 256 | 100 |
    | Left   | 1.97&nbsp;V | 409 | 409 | 199 |
    | Select | 3.182&nbsp;V | 651 | 640 | 280 |
-   | none   | 5&nbsp;V |  | 1023 | 3ff |
+   | none   | 5&nbsp;V | 1023 | 1023 | 3ff |
 
 ### Temperature meter
 

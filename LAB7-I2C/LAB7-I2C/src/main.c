@@ -73,20 +73,20 @@ int main(void)
  **********************************************************************/
 ISR(TIMER1_OVF_vect)
 {
-    static uint8_t sla = 8;  // I2C Slave address
+    static uint8_t sla = 87;  // I2C Slave address
     uint8_t ack;             // ACK response from Slave
     char string[3];         // String for converting numbers by itoa()
     
-    struct Air_parameters_structure {
-          uint8_t humid_int;
-          uint8_t humid_dec;
+    struct Time_parameters_structure {
+          uint8_t seconds;
+          uint8_t minutes;
           uint8_t temp_int;
           uint8_t temp_dec;
           uint8_t checksum;
-        } air;
+        } time;
     // Start communication, transmit I2C Slave address, get result,
     // and Stop communication
-    /*ack = twi_start(sla, TWI_WRITE);
+    ack = twi_start(sla, TWI_WRITE);
     twi_write(0x00);
     twi_stop();
 
@@ -137,14 +137,14 @@ ISR(TIMER1_OVF_vect)
    // ack = twi_start(sla, TWI_WRITE);
   //twi_stop(); */
 
-    if (ack==0)
+   /*if (ack==0)
     {
       itoa(sla, string, 10);
       uart_puts(string);
       uart_puts("\n");
     } 
     sla++;
-
+      */
 
     // Test ACK/NACK value obtained from I2C bus and send info to UART
     

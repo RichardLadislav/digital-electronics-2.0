@@ -28,7 +28,7 @@ V stave pokoja, keď nie je s Joy Stickom manipulované nadobúda výstupné nap
 ![JoyStickSmerz](https://user-images.githubusercontent.com/99683944/205034556-a86ae40a-1e32-45dd-8896-14e67f004670.png)
 ![joystickDobre](https://user-images.githubusercontent.com/99683944/205034636-049df2af-aab6-4d67-9917-56e2f35a5b18.png)
 
-
+### LCD display
 
 ![your figure](https://github.com/davidhro/digital-electronics_2/blob/main/Project_1/pictures/LCD_pinout.png)
 ![your figure]()
@@ -51,5 +51,5 @@ V stave pokoja, keď nie je s Joy Stickom manipulované nadobúda výstupné nap
 
 ## References
 
-1. 
+1. http://www.handsontec.com/dataspecs/accessory/PS2-Joystick.pdf
 2.

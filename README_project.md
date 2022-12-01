@@ -4,6 +4,7 @@
 
 * David Hromas
 * Filip Voch
+* Richard Ladislav
 
 ### Table of contents
 

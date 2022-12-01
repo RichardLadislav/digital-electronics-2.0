@@ -56,4 +56,4 @@ V stave pokoja, keď nie je s Joy Stickom manipulované nadobúda výstupné nap
 ## References
 
 1. http://www.handsontec.com/dataspecs/accessory/PS2-Joystick.pdf
-2.
+2. https://howtomechatronics.com/tutorials/arduino/rotary-encoder-works-use-arduino/

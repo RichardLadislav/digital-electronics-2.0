@@ -32,7 +32,8 @@ V stave pokoja, keď nie je s Joy Stickom manipulované nadobúda výstupné nap
 ### LCD display
 
 ![your figure](https://github.com/davidhro/digital-electronics_2/blob/main/Project_1/pictures/LCD_pinout.png)
-![your figure]()
+![LCD_pinout](https://user-images.githubusercontent.com/99683944/205039905-d8dde4cb-79b3-4df0-93b8-fbf0b47b5101.png)
+
 
 ### Rotačný enkodér
 

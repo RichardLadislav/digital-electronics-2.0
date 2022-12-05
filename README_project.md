@@ -57,3 +57,4 @@ V stave pokoja, keď nie je s Joy Stickom manipulované nadobúda výstupné nap
 
 1. http://www.handsontec.com/dataspecs/accessory/PS2-Joystick.pdf
 2. https://howtomechatronics.com/tutorials/arduino/rotary-encoder-works-use-arduino/
+3. https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf

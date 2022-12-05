@@ -43,7 +43,9 @@ Enkodér generuje dva obdĺžnikové signály nazývané clock (pin CLK) a data 
 Čip ATmega328P, ktorým je doska Arduina UNO osadená následne túto zmenu fáze deteguje a podľa toho rozhoduje o inkrempentácii, či dekrementácii premennej. Tieto vlastnosti robia z rotačného enkodéru ideálnu súčiastku pre projekty, v ktorých je potreba jednoduchá orientácia v menu, ovládanie servomotorov a iné aplikácie, kde 360 stupňový rozsah rotačných potenciometrov nevystačí. 
 ![encoder](https://user-images.githubusercontent.com/99683944/205036515-bb7ead21-4897-4920-b1be-1d6879a7a050.png)
 
+### Finálny pinout projektu
 
+![projekt1_finalPinou](https://user-images.githubusercontent.com/99683944/205702651-b4dd97b1-2299-4d3a-82a2-d01c4f0b3459.png)
 
 
 ## Software description

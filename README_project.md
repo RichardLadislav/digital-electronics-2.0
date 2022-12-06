@@ -71,6 +71,32 @@ Enkodér generuje dva obdĺžnikové signály nazývané clock (pin CLK) a data 
    ```
 ![flowchartADMUX](https://user-images.githubusercontent.com/99683944/205927797-109ba625-1778-44eb-b8ba-52f494f3f20b.png)
 ### Funkce SetTimer
+```c
+   if (buttonVal == 0)
+    {
+       if (CursorX = 0 && CursorY = 0 )
+      {
+        minutes = minutes + 10;
+       
+      }
+       
+       else if (CursorX = 1 && CursorY = 0 )
+      {
+        minutes ++;
+       
+      } 
+       else if (CursorX = 3 && CursorY = 0 )
+      {
+        seconds = seconds + 10;
+       
+      } 
+       else if (CursorX = 4 && CursorY = 0 )
+      {
+        seconds ++;
+       
+      } 
+    }
+```
 ![flowchartSetTimer](https://user-images.githubusercontent.com/99683944/205927833-6f11ed96-a3ac-4330-87e5-f5cb927f9fc3.png)
 
 

@@ -51,6 +51,18 @@ Enkodér generuje dva obdĺžnikové signály nazývané clock (pin CLK) a data 
 ## Software description
 
 ### Funkce TimerOVF_vect
+/* Global variables --------------------------------------------------*/
+// Declaration of "air" variable with structure "Air_parameters_structure"
+struct Air_parameters_structure {
+    uint8_t humid_int;
+    uint8_t humid_dec;
+    uint8_t temp_int;
+    uint8_t temp_dec;
+    uint8_t checksum;
+} air;
+
+...
+air.humid_int = twi_read_ack();  // Store one byte to structured variable
 ![flowchartADMUX](https://user-images.githubusercontent.com/99683944/205927797-109ba625-1778-44eb-b8ba-52f494f3f20b.png)
 ### Funkce SetTimer
 ![flowchartSetTimer](https://user-images.githubusercontent.com/99683944/205927833-6f11ed96-a3ac-4330-87e5-f5cb927f9fc3.png)

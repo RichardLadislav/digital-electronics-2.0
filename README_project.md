@@ -51,6 +51,7 @@ Enkodér generuje dva obdĺžnikové signály nazývané clock (pin CLK) a data 
 ## Software description
 
 ### Funkce TimerOVF_vect
+´´C
 /* Global variables --------------------------------------------------*/
 // Declaration of "air" variable with structure "Air_parameters_structure"
 struct Air_parameters_structure {
@@ -62,6 +63,7 @@ struct Air_parameters_structure {
 } air;
 
 ...
+´´C
 air.humid_int = twi_read_ack();  // Store one byte to structured variable
 ![flowchartADMUX](https://user-images.githubusercontent.com/99683944/205927797-109ba625-1778-44eb-b8ba-52f494f3f20b.png)
 ### Funkce SetTimer

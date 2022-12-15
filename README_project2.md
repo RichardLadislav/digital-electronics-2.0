@@ -41,160 +41,56 @@ PMW signálu. Na obrázku nižšie môžeme nájsť finálny pinout nášho proj
 
 ### Funkce Timer1OVF_vect - spuštění konverze na ADC, přepínání mezi dvěma kanály
  ```c
-   static uint8_t channel = 0;
-   if (channel == 0)
-   {
-    ADMUX &= ~((1 << MUX0) | (1 << MUX1) | (1 << MUX2) | (1 << MUX3));
-    channel = 1;
-   }
-   else
-   {
-    ADMUX &= ~((1 << MUX1) | (1 << MUX2) | (1 << MUX3));
-    ADMUX |= (1 << MUX0);
-    channel = 0;
-   }
-    
-   // Start ADC conversion
-    ADCSRA |= (1 << ADSC);
+  ISR(TIMER0_OVF_vect)
+{
+    static uint8_t servo_x_step = 0;        
+    static uint8_t servo_y_step = 0;
+    static uint8_t increment = 1;   
 
-   ```
-![flowchartADMUX](https://user-images.githubusercontent.com/99683944/205927797-109ba625-1778-44eb-b8ba-52f494f3f20b.png)
-
-### Funkce ADC_vect - definování pohybu joysticku
- ```c
-    static uint8_t channel = 0;
-    uint16_t value;
-   
-    char string[4];  // String for converted numbers by itoa()
-   
-    //Cursors, defined as volatile variable
-   
-    if (channel == 0) //osa x
-    {
-     value = ADC;
-     if (value > 600)
-     {
-     CursorX++;
-     if (CursorX == 2)
-     {
-       CursorX = 3;
-     }
-     else if (CursorX == 5)
-     {
-       CursorX = 6;
-     }
-     else if (CursorX > 6)
-     {
-       CursorX = 0;
-     }
-         
-     lcd_gotoxy(CursorX, CursorY);
-     }
-    else if (value < 400)
-    {
-     CursorX--;
-     if (CursorX == 5)
-     {
-       CursorX = 4;
-     }
-     else if (CursorX == 2)
-     {
-       CursorX = 1;
-     }
-     else if (CursorX < 0)
-     {
-       CursorX = 6;
-     }
-     lcd_gotoxy(CursorX, CursorY);
-    }
-    else
-    {
-     lcd_gotoxy(CursorX, CursorY);
-    }
-     channel = 1;
-   }
-   else if (channel == 1) //osa y
-   {
-    value = ADC;
-     if (value > 600)
-     {
-      CursorY != CursorY;
-      lcd_gotoxy(CursorX, CursorY);
-      }
-     else if (value < 400)
-     {
-     CursorY != CursorY;
-     lcd_gotoxy(CursorX, CursorY);
-     }
-     else
-     {
-     lcd_gotoxy(CursorX, CursorY);
-     }
-     channel = 0;
-   }
-   ```
-![flowchartJoystick](https://github.com/davidhro/digital-electronics_2/blob/main/Project_1/pictures/flowchart_adc.png)
-
-### Funkce SetTimer
-```c
-   if (buttonVal == 0)
-    {
-       if (CursorX = 0 && CursorY = 0 )
+    if (servo_x == POSITION_1)      
       {
-        minutes = minutes + 10;
-       
+        servo_x_step = 1;           
+      }
+    else if (servo_x == POSITION_2) 
+      {
+        servo_x_step = 0;          
       }
        
-       else if (CursorX = 1 && CursorY = 0 )
+    if (servo_x_step == 0)
       {
-        minutes ++;
-       
-      } 
-       else if (CursorX = 3 && CursorY = 0 )
+        servo_x += increment;              
+      }
+        
+    if (servo_x_step == 1)
       {
-        seconds = seconds + 10;
+        servo_x -= increment;               
+      }
+    OCR1A = servo_x;                
        
-      } 
-       else if (CursorX = 4 && CursorY = 0 )
+      
+    if (servo_y == POSITION_1)      
       {
-        seconds ++;
+        servo_y_step = 1;              
+      }
+    else if (servo_y == POSITION_2) 
+      {
+        servo_y_step = 0;               
+      }
        
-      } 
-    }
-```
-![flowchartSetTimer](https://user-images.githubusercontent.com/99683944/205927833-6f11ed96-a3ac-4330-87e5-f5cb927f9fc3.png)
+    if (servo_y_step == 0)
+      {
+        servo_y += increment + 1;               
+      }
 
-### Funkce Timer v ISR(Timer1_OVF_vect)
-```c
-  no_of_overflows++;
-    if (no_of_overflows >= 3)
-    {
-        // Do this every 3 x 33 ms = 100 ms
-        no_of_overflows = 0;
-        tenths--;
-        // Count tenth of seconds 9, 8, ..., 0, 9, 8, ...
-        if (tenths = 0)
-        {
-          tenths = 9;
-          seconds--;
+    if (servo_y_step == 1)
+      {
+        servo_y -= increment + 1;                
+      }
+    OCR1B = servo_y;                  
+}
 
-          if (seconds = 0)
-          {
-            seconds = 59;
-            minutes--;
-            if (minutes = 0)
-            {
-              tenths = 0;
-              seconds = 0;
-              minutes = 0;
-            }
-          }
-        }
-```
-![flowchartTimerCount](https://github.com/davidhro/digital-electronics_2/blob/main/Project_1/pictures/flowchart_timer.png)
-
-
-
+   ```
+![FlowServopdf-1](https://user-images.githubusercontent.com/99683944/207745250-ad46fee8-b30d-4fe5-8392-23e8b9112708.png)
 
 
 ## Video

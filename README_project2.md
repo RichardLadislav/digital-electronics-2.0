@@ -21,24 +21,20 @@
 ## Hardware description
 ![Arduino Uno](https://github.com/davidhro/digital-electronics_2/blob/main/Project_1/pictures/Arduino_uno_pinout.png)
 
-### PS2 Joy Stick
-Stick je prstom ovládaný modul pozostávajúci z dvoch potenciometrov o veľkosti 10kΩ a jedného tlačidla. Potenciometre indikujú súradnice smeru do ktorého je páčka vychýlená a tlačidlo vysiela low signál
-V stave pokoja, keď nie je s Joy Stickom manipulované nadobúda výstupné napätie X i Y hodnotu 2,5V a následným pohybom meníme rozsah odporu potenciometrov v rozsahu 0Ω až 10kΩ, čo mení výstupné napätie modulu v rozmedzí 0V až 5V podľa smeru výchylky. Toto napätie je následne Arduinom interpretované ako celočíselná hodnota pohybujúca sa medi  0 až 1023.
+### Servo motor
+Servomotry slúžia na nastavenie určitej polohy ovládaného mechanizmu a následné udržanie v tejto polohe. Jednosmerné servo motory môžeme často nájsť vo využitiach, 
+ako ovládanie robotických paží. Jednou z ich najväčších vyćhod je pomer veľkosti a hmotnosti ku sile, ktorú sú schopné vyvinúť. V obvyklom prevedení servo motor neumožňuje otáčanie o celých 360 stupňov, ale v rozsahu 0 až 180 stupňov. Uhol natočenia sa nastavuje zaslaním impilzu o určitej dĺžke. Pre 90 stupńov 1,5ms, pre 0 stupňov 0,5ms a pre 180 stupňov 2,5ms.
 
-![your figure](https://github.com/davidhro/digital-electronics_2/blob/main/Project_1/pictures/Joystick_pinout.png)
-![JoyStickSmerz](https://user-images.githubusercontent.com/99683944/205034556-a86ae40a-1e32-45dd-8896-14e67f004670.png)
-![joystickDobre](https://user-images.githubusercontent.com/99683944/205034636-049df2af-aab6-4d67-9917-56e2f35a5b18.png)
+![servoUhly](https://user-images.githubusercontent.com/99683944/207743354-10b85f20-140b-4f68-8533-12b71b546de2.png)
 
-### LCD display
+#### Pinout Servomotora
+Bežný servo motor má obvykle tri vstupy. GND pripájame na zem Vcc na +5V pin Arduino dosky a tretí väčšinou žltej farby na Arduino pin so schopnosťou vysielania 
+PMW signálu. Na obrázku nižšie môžeme nájsť finálny pinout nášho projektu s dvomi zapojenými servo motormi.
 
-![your figure](https://github.com/davidhro/digital-electronics_2/blob/main/Project_1/pictures/LCD_pinout.png)
-![LCD_pinout](https://user-images.githubusercontent.com/99683944/205039905-d8dde4cb-79b3-4df0-93b8-fbf0b47b5101.png)
+![servoPinout](https://user-images.githubusercontent.com/99683944/207743430-bc56773f-a3f6-486a-81e7-b2ed7d31006d.png)
 
+### PWM 
 
-
-### Finálny pinout projektu
-
-![projekt1_finalPinou](https://user-images.githubusercontent.com/99683944/205702651-b4dd97b1-2299-4d3a-82a2-d01c4f0b3459.png)
 
 
 ## Software description
@@ -207,8 +203,8 @@ V stave pokoja, keď nie je s Joy Stickom manipulované nadobúda výstupné nap
 ## References
 
 1. [http://www.handsontec.com/dataspecs/accessory/PS2-Joystick.pdf](https://navody.dratek.cz/arduino-projekty/servo-motor.html)
-2. [https://howtomechatronics.com/tutorials/arduino/rotary-encoder-works-use-arduino/](https://www.ee-diary.com/2021/07/phase-correct-pwm-with-atmega328p.html?fbclid=IwAR24t4myL5OQH8FrCGZd9OGGwccg384H3I16n2MI2PBwJB_tLiVsiZRMhus)
-3. https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf
+2. https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf
+3. https://www.ee-diary.com/2021/07/phase-correct-pwm-with-atmega328p.html?fbclid=IwAR24t4myL5OQH8FrCGZd9OGGwccg384H3I16n2MI2PBwJB_tLiVsiZRMhus
 4. https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf
 5. https://app.code2flow.com/
 6. https://app.diagrams.net/

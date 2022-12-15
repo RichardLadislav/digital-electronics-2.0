@@ -90,7 +90,7 @@ PMW signálu. Na obrázku nižšie môžeme nájsť finálny pinout nášho proj
 }
 
    ```
-![FlowServopdf-1](https://user-images.githubusercontent.com/99683944/207745250-ad46fee8-b30d-4fe5-8392-23e8b9112708.png)
+![FlowServopdf-1](https://user-images.githubusercontent.com/99683944/207745250-ad46fee8-b30d-4fe5-8392-23e8b9112708.png {width=900px height=20000px})
 
 
 ## Video

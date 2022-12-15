@@ -34,7 +34,7 @@ PMW signálu. Na obrázku nižšie môžeme nájsť finálny pinout nášho proj
 ![servoPinout](https://user-images.githubusercontent.com/99683944/207743430-bc56773f-a3f6-486a-81e7-b2ed7d31006d.png)
 
 ### PWM 
-
+V projekte využívame phase correct PWM (pulse width modulation), ktorá je bežne využívaná na ovládanie servo motorov.
 
 
 ## Software description

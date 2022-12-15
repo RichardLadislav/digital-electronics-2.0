@@ -202,7 +202,7 @@ PMW signálu. Na obrázku nižšie môžeme nájsť finálny pinout nášho proj
 
 ## References
 
-1. [http://www.handsontec.com/dataspecs/accessory/PS2-Joystick.pdf](https://navody.dratek.cz/arduino-projekty/servo-motor.html)
+1. https://navody.dratek.cz/arduino-projekty/servo-motor.htm
 2. https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf
 3. https://www.ee-diary.com/2021/07/phase-correct-pwm-with-atmega328p.html?fbclid=IwAR24t4myL5OQH8FrCGZd9OGGwccg384H3I16n2MI2PBwJB_tLiVsiZRMhus
 4. https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf

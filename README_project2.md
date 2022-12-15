@@ -34,8 +34,10 @@ PMW signálu. Na obrázku nižšie môžeme nájsť finálny pinout nášho proj
 ![servoPinout](https://user-images.githubusercontent.com/99683944/207743430-bc56773f-a3f6-486a-81e7-b2ed7d31006d.png)
 
 ### PWM 
-V projekte využívame phase correct PWM (pulse width modulation), ktorá je bežne využívaná na ovládanie servo motorov.
-
+V projekte využívame phase correct PWM (pulse width modulation), ktorá je bežne využívaná na ovládanie servo motorov. Phase correct PWM je založená na dual-slope operation (môžeme chápať ako operáciu založenú na vzostupnej i zostupnej hrane signálu). Toto má za sdôsledok sće menšiu maximálnu frekvenciu generovaného signálu, ako u single-slope operation, no vďaka jej symetrickým vlastnostiam je práve phase correct PWM vhodnejšia pre prácu s motormi. Čítačka (counter)
+ počíta opakovane od spodnej hodnoty BOTTOM po vrchnú TOP a vice versa. V našej aplikácii využívame desiaty mód Timer/Counter1, kde môžeme hodnotu TOP nastaviť pomocou ICR1, no v iných módoch je táto hodnota fixná a to na hodnoty 0x00FF, 0x01FF, alebo 0x03FF. 
+ 
+![Timer_counter1 phase correct PWM](https://user-images.githubusercontent.com/99683944/207982797-1ef7bf62-49a6-4e6f-9d67-a2a3e0a94fb3.png)
 
 ## Software description
 

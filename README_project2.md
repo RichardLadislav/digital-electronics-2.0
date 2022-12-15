@@ -39,7 +39,7 @@ PMW signálu. Na obrázku nižšie môžeme nájsť finálny pinout nášho proj
 
 ## Software description
 
-### Funkce Timer1OVF_vect - spuštění konverze na ADC, přepínání mezi dvěma kanály
+### Funkce Timer1OVF_vect
  ```c
   ISR(TIMER0_OVF_vect)
 {

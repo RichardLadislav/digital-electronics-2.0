@@ -206,8 +206,8 @@ V stave pokoja, keď nie je s Joy Stickom manipulované nadobúda výstupné nap
 
 ## References
 
-1. http://www.handsontec.com/dataspecs/accessory/PS2-Joystick.pdf
-2. https://howtomechatronics.com/tutorials/arduino/rotary-encoder-works-use-arduino/
+1. [http://www.handsontec.com/dataspecs/accessory/PS2-Joystick.pdf](https://navody.dratek.cz/arduino-projekty/servo-motor.html)
+2. [https://howtomechatronics.com/tutorials/arduino/rotary-encoder-works-use-arduino/](https://www.ee-diary.com/2021/07/phase-correct-pwm-with-atmega328p.html?fbclid=IwAR24t4myL5OQH8FrCGZd9OGGwccg384H3I16n2MI2PBwJB_tLiVsiZRMhus)
 3. https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf
 4. https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf
 5. https://app.code2flow.com/
